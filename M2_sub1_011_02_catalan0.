@@ -1,0 +1,65 @@
+function [avg_speed_data] = project_function_catalan0 
+(speed_data)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ENGR 132 
+% Program Description 
+% This subfunction is in charge of cleaning the noisy data by using moving
+% averages
+%
+% Function Call
+% project_function_catalan0
+%
+% Input Arguments
+% time_data
+%
+% speed_data
+%
+% Output Arguments
+% clean_time_data
+%
+% clean_speed_data
+%
+% Assignment Information
+%   Assignment:     M02, Problem 2
+%   Team member:    catalan0, catalan0@purdue.edu 
+%   Team ID:        011-02
+%   Academic Integrity:
+%     [] We worked with one or more peers but our collaboration
+%        maintained academic integrity.
+%     Peers we worked with: NONE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ____________________
+%% INITIALIZATION
+column_size = speed_data(1,:); %Accounts for all the columns
+                               %Ultimately this seperates each test 
+                               %from each other to ensure that we calculate
+                               %moving averages for each test individually
+rows_size = speed_data(:,1);   %Accounts for all rows, in other words the
+
+%% ____________________
+%% CALCULATIONS
+for ii = 1:rows_size
+    for jj = 1:column_size
+        if (data(n) && data(n+1)) 
+            avg_speed_data(n) = ((data(n) + data(n+1)) / 2); 
+            %% Average of the two becomes new data point named 
+            %% avg_speed_data(n) 
+
+        elseif (isnan(data(n)))
+            avg_speed_data(n) = (nan); 
+            %% What to do if the value isn’t there, we just skip over it
+
+        end 
+    end 
+end 
+
+%% ____________________
+%% RESULTS
+
+
+%% ____________________
+%% ACADEMIC INTEGRITY STATEMENT
+% We have not used source code obtained from any other unauthorized
+% source, either modified or unmodified. Neither have we provided
+% access to my code to another. The program we are submitting
+% is our own original work.
